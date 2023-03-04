@@ -1,14 +1,185 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta name= "description" content="AWM">
-        <title>Abby's Test Website</title>
-    </head>
-    <body>
-        <h1>Hello Everyone</h1>
-        
-        <p> This is a fake website I'm making in AWM</p>
-    
-    </body>
+<HTML>
+<title> Abby Perryman's 2022 REU Page </title>
 
-</html>
+
+
+<body style="background-color:#FFB779;">
+    <h1>Abby Perryman's 2022 REU Page</h1>
+</body>
+
+<div style="width:800px;"> 
+
+<div style="float:left;"> 
+
+<img src="picofme.jpg"
+width = "130"
+style = "margin: 10px;">
+</div>
+<table style="max-width:800px;>">
+<br>
+<tr>
+<th>Name:</th> 
+
+<td>Abigail Perryman</td> 
+
+</tr> 
+
+<tr> 
+
+<th>Email:</th> 
+
+<td>
+abbyperryman2705@gmail.com </td> 
+
+</tr> 
+
+<tr> 
+
+</tr> 
+
+<tr> 
+
+<th>Home Institution:</th> 
+
+<td>
+
+<a href="https://www.utexas.edu/">The University of Texas at Austin</a>
+
+</td>
+
+</tr>
+
+<tr> 
+
+<th>Project:</th> 
+
+<td>Mathematical Physics in One Space Dimension</td> 
+
+</tr> 
+
+<tr>
+
+<th>Mentor:</th>
+
+<td><a href="https://sites.math.rutgers.edu/~shadit/">Professor A. Shadi Tahvildar-Zadeh </a></td>
+
+</tr>
+
+<th>Collaborators:</th>
+
+<td>
+
+<a href= "http://reu.dimacs.rutgers.edu/~kn443/" >Kabir Narayanan </a> </p>
+
+</td>
+
+
+
+</table> 
+
+
+
+
+
+
+
+<br>
+
+<br>
+
+
+
+
+<h2> About My Project </h2>
+
+<p>When studying classical objects, we use the velocity to find the energy and momentum of systems. However, in quantum mechanics, velocities of particles are not typically well-defined, so instead we define energy and momentum operators and find the expectation
+values. Bohmian mechanics is a theory of quantum mechanics in which particles have a definite velocity, so both the classical definition and the operator definition have meaning. Our goal is to build on the work in <a href=https://arxiv.org/abs/1906.03632>this paper</a> and study how these two definitions are related and how they can give us insight into both free particle dynamics 
+and into Compton scattering.</p>
+
+<h2> Research Log </h2>
+
+<h3> Week 1: June 1 - June 3 </h3>
+
+<p>This week, I met with Professor A. Shadi Tahvildar-Zadeh for the first time in person.
+Kabir Narayanan, the other REU student on this project, and I worked on our presentation, and I read through research from previous REU students and compiled questions. 
+I also continued to work on my code for the single photon case and the single electron case. </p>
+
+<h3> Week 2: June 6 - June 10 </h3>
+
+<p> After meeting with Professor Tahvildar-Zadeh and discussing the connections between linear algebra and quantum mechanics, 
+I did my own research into this topic and similar ones such as unitary operators, time evolution, and Bohmian mechanics in order to solidify my knowledge 
+and to become more familiar with the framework of this research. Additionally, Kabir and I examined the role of acceleration in the single photon system and studied how
+changing theta in the initial data for a Gaussian wavefunction affects the trajectories and acceleration of the photon. We also started exploring if there exists
+an initial value of x for which the velocity is 0 as the time approaches infinity. After talking with Professor Tahvildar-Zadeh, we realized that this wasn't a very fruitful
+avenue of research. I then continued to work on using python to compare the quantum version of momentum with the classical/relativistic version of momentum through the models 
+presented in our professor's previous paper. 
+
+<h3> Week 3: June 13 - June 17 </h3>
+<p> I refined my code in python and created plots for a single electron's trajectory, momentum, and probability density. Kabir and I worked to compile sets of graphs varying one of the parameters.
+Then, after meeting with Professor Tahvildar-Zadeh, I created plots with multiple trajectories along with mechanisms to calculate the average momentum from those trajectories at a specific time.
+Additionally, I made functions to calculate the expected value of velocity and momentum of a single electron. Kabir and I started grouping this data in a spreadsheet to study how each parameter affected
+the trajectories and momentum of the electron. Particularly, we are interested in seeing if the asymptotic momentum of a particle approaches the expected value of the momentum operator. Additionally, 
+we started studying the energy of the system by finding the expected value of the Hamiltonian operator for the single electron.</p>
+
+<h3>Week 4: June 20 - June 24</h3>
+<p>I continued to run my code to gather more data on the dependence of the momentum on k and to compare the expected value of momentum at some time with the average of the momenta of several randomly chosen
+trajectories. I created several plots, keeping in mind the goal of examining the asymptotic momentum values. We suspected that there might be some relationship between the asymptotic values and the initial expected value
+of the momentum operator, which is h_bar*k. Some of the plots I created were plots of momentum vs. time for many trajectories, momentum at time 10 vs. the initial starting position, and momentum expected value vs. time 
+(all of which used the gamma*m*v definition). I also found a limit formula that could possibly be used to calculate the asymptotic momentum, and I plotted this at large times. The plots seemed to agree with having an average
+of about h_bar*k, but more analysis is required. Most of this work was done with m = 1 and sigma = 1, but I also tried m = 10 and sigma = 0.1. These were more sporadic, which makes sense because decreased uncertainty in position
+leads to more uncertainty in momentum. I started exporting data for multiple trajectories. In addition, I began applying similar techniques to study energy, comparing gamma*m with the expected value of the Hamiltonian. </p>
+
+<h3>Week 5: June 27 - July 1</h3>
+<p>After observing a plot of momentum vs. time for several trajectories with large k, I realized that the momentum appears to approach either +k or -k (the expected value of the momentum operator or its negative) based on the initial position of the particle and on k and theta.
+I collected data about the mean positive momentum and negative momentum for different values of k, theta, m, and sigma. I also collected data on the mean energy and noticed that it seemed to be independent of theta and dependent on
+m and k. I also plotted these trajectories and analyzed histograms of the momentum values, noticing that the positive values seemed to be skewed right while the negative values are typically skewed left. 
+Additionally, I computed energy expected values at time 10 and plotted the relationships with m, sigma, and k. After meeting with Professor Shadi, I realized that the energy expected values seem to be the square root of m squared plus k squared.
+There is also some relation to sigma that I am still studying. I also tried to figure out which initial position serves as the boundary between particles going left and those going right. In our meeting with Professor Shadi, we learned more about
+the Bloch Sphere Representation and began to think about how to apply this to figuring out the asymptotic energy and momentum, specifically with solving for theta(t, s), since momentum comes out to m*cot(theta(t, s)). We also began working on our report.
+In our meeting with Professor Shadi, we started talking about the two-particle case and prepared to apply similar techniques to analyze the energy and momentum of this system and Compton scattering specifically. I started coding the two-particle equations.
+
+<h3>Week 6: July 5 - July 8</h3>
+<p>I worked on programming the two particle case. This meant using Monte Carlo double integration to find the values of the wave functions after interaction. Additionally, I graphed the behavior of the Bloch sphere variables over time and studied their asymptotic values and 
+how those values are related to each other. As a final task with the single variable case, I worked on a program to find the time at which the electron's momentum stabilizes and gathered data on how the values of k and m affect this time. 
+I continued to work on the report, filling in the single particle sections and the introduction. I solved and plotted trajectories for the non-interacting case and worked on plotting trajectories for the interacting case as well.
+</p>
+
+<h3>Week 7: July 11 - July 15</h3>
+<p>I plotted the non-interacting two particle case and verified that it returns the particles going through each other. Then I worked on the triple integral Monte Carlo code and applied that to evaluate the interacting wave function. Additionally, I studied 
+how sigma affects the time required for the momentum to approach asymptotic, i.e. locally plane wave-like, behavior. Additionally, I worked on our conjecture about how the derivative of the Bloch variable phi relates to the energy. I read up on Hamiltonian-Jacobi Theory 
+for this. I tried plotting interacting trajectories for the two particle case, but ended up having to comb through many bugs without concrete results yet. Eventually, I generated plots for 0.7 seconds of interaction. Finally, I started working on our final presentation.
+
+<h3>Week 8: July 18 - July 22</h3>
+<p>I tried to determine the asymptotic expansion for the momentum through a log-log plot and linear regression. Additionally, Kabir and I worked on our presentation, presenting a draft to Professor Shadi, going over it, and then revising. We practiced presenting as well. 
+I continued examining the asymptotic expansion, looking at the later behavior, which seems sort of exponential but on a very small scale. Additionally, I changed the two-particle code to use trapezoidal integration in the hopes of making the code more efficient. 
+This appeared to work as I found a few interacting plots that look accurate. 
+
+<h3>Week 9: July 25 - July 29</h3>
+<p>After taking another look at the large mass, small sigma, and small k case, Kabir and I concluded that we don't seem to see the same asymptotic behavior for these specific initial conditions. Instead, it appears that a small sigma in particular causes a diffraction effect similar 
+to what we see with single-slit diffraction. We told Professor Shadi about this, and he said this was a fair assessment and helped explain the assumptions that need to be made in initial conditions. We plan on looking into this case more in the future. Other than that, I worked on the report.</p>
+
+
+
+<h2> Funding </h2>
+<p>I am supported by the Rutgers Math Department. This work is done as part of the 2022 DIMACS REU program.</p>
+
+
+<h2>New Brunswick Coffee Shop Reviews</h2>
+
+<p>Over the course of the program, Kabir and I worked in many different coffee shops in New Brunswick, aiming to try as many as we could. Here are some of my reviews.</p>
+
+<h4>Efe's Cafe</h4>
+<p>One of the best lattes I have ever had! It was very cute and classy. There weren't many seats or outlets though. The restaurant above the cafe was also great.</p>
+
+<h4>Gloria Jean's</h4>
+<p>If you're planning on just sitting and cranking work out, this is a great place to do so. Plenty of outlets, not super crowded, good seating. Not the cutest place, but the coffee was pretty good, and I was very productive here.</p>
+
+<h4>Simply Chai</h4>
+<p>The coffee was pretty good, and I liked my bagel, but the vibes were not my favorite.</p>
+
+<h4>Friends Cafe</h4>
+<p>As someone who has never seen 'Friends,' I was a bit confused, but the coffee and food were both good. Turns out though, it's not a bad place for a lecture about classical mechanics (thanks Larry!)
+
+
+
+<HTML> 
